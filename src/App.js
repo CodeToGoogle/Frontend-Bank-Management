@@ -49,6 +49,7 @@ function App() {
 
         </nav>
         <Routes>
+        <Route path="/" element={<ViewBanks />} />
           <Route path="/create-bank" element={<CreateBank />} />
           <Route path="/create-branch" element={<CreateBranch />} />
           <Route path="/create-service" element={<CreateService />} />
