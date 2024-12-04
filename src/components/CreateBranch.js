@@ -22,31 +22,78 @@ function CreateBranch() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Create Branch</h2>
-      <input
-        type="text"
-        placeholder="Branch Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="City"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Bank ID"
-        value={bankId}
-        onChange={(e) => setBankId(e.target.value)}
-        required
-      />
-      <button type="submit">Create Branch</button>
-    </form>
+    <form
+    onSubmit={handleSubmit}
+    style={{
+      display: "flex", // Enables flexbox
+      flexDirection: "column", // Stacks items vertically
+      justifyContent: "center", // Centers vertically
+      alignItems: "center", // Centers horizontally
+      height: "100vh", // Full viewport height
+      margin: "0", // No default margin
+    }}
+  >
+    <h2 style={{ marginBottom: "20px", color: "#333", textAlign: "center" }}>
+      Create Branch
+    </h2>
+    <input
+      type="text"
+      placeholder="Branch Name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      required
+      style={{
+        width: "300px",
+        padding: "10px",
+        margin: "10px 0",
+        borderRadius: "5px",
+        border: "1px solid #ccc",
+      }}
+    />
+    <input
+      type="text"
+      placeholder="City"
+      value={city}
+      onChange={(e) => setCity(e.target.value)}
+      required
+      style={{
+        width: "300px",
+        padding: "10px",
+        margin: "10px 0",
+        borderRadius: "5px",
+        border: "1px solid #ccc",
+      }}
+    />
+    <input
+      type="number"
+      placeholder="Bank ID"
+      value={bankId}
+      onChange={(e) => setBankId(e.target.value)}
+      required
+      style={{
+        width: "300px",
+        padding: "10px",
+        margin: "10px 0",
+        borderRadius: "5px",
+        border: "1px solid #ccc",
+      }}
+    />
+    <button
+      type="submit"
+      style={{
+        width: "150px",
+        padding: "10px",
+        backgroundColor: "#007bff",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer",
+      }}
+    >
+      Create Branch
+    </button>
+  </form>
+  
   );
 }
 

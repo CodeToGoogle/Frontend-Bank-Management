@@ -20,24 +20,64 @@ function CreateService() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Create Service</h2>
-      <input
-        type="text"
-        placeholder="Service Name"
-        value={serviceName}
-        onChange={(e) => setServiceName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Bank ID"
-        value={bankId}
-        onChange={(e) => setBankId(e.target.value)}
-        required
-      />
-      <button type="submit">Create Service</button>
-    </form>
+    <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex", // Enables flexbox
+    flexDirection: "column", // Aligns children vertically
+    justifyContent: "center", // Centers vertically
+    alignItems: "center", // Centers horizontally
+    height: "100vh", // Full viewport height
+    margin: "0", // Resets default margin
+  }}
+>
+  <h2 style={{ marginBottom: "20px", color: "#333", textAlign: "center" }}>
+    Create Service
+  </h2>
+  <input
+    type="text"
+    placeholder="Service Name"
+    value={serviceName}
+    onChange={(e) => setServiceName(e.target.value)}
+    required
+    style={{
+      width: "300px",
+      padding: "10px",
+      margin: "10px 0",
+      borderRadius: "5px",
+      border: "1px solid #ccc",
+    }}
+  />
+  <input
+    type="number"
+    placeholder="Bank ID"
+    value={bankId}
+    onChange={(e) => setBankId(e.target.value)}
+    required
+    style={{
+      width: "300px",
+      padding: "10px",
+      margin: "10px 0",
+      borderRadius: "5px",
+      border: "1px solid #ccc",
+    }}
+  />
+  <button
+    type="submit"
+    style={{
+      width: "150px",
+      padding: "10px",
+      backgroundColor: "#007bff",
+      color: "white",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+    }}
+  >
+    Create Service
+  </button>
+</form>
+
   );
 }
 

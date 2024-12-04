@@ -6,19 +6,47 @@ import CreateService from "./components/CreateService";
 import ViewBranches from "./components/ViewBranches";
 import ViewServices from "./components/ViewServices";
 import ViewBanks from "./components/ViewBanks";
+import './styles.css';
+
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Bank Management System</h1>
+        <h1 style={{color: "black"}}>Bank Management System</h1>
         <nav>
-          <ul>
-            <li><Link to="/create-bank">Create Bank</Link></li>
-            <li><Link to="/create-branch">Create Branch</Link></li>
-            <li><Link to="/create-service">Create Service</Link></li>
-            <li><Link to="/view-banks">View Banks</Link></li>
-          </ul>
+        <ul
+  style={{
+    display: "flex", // Flex row
+    listStyleType: "none", // Remove bullets
+    justifyContent: "center", // Center items horizontally
+    alignItems: "center", // Align items vertically
+    padding: "0", // Remove default padding
+    margin: "20px 0", // Add margin above and below
+  }}
+>
+  <li style={{ margin: "0 20px" }}> {/* Space between items */}
+    <Link to="/create-bank" style={{ textDecoration: "none", color: "#007bff", fontWeight: "bold" }}>
+      Create Bank
+    </Link>
+  </li>
+  <li style={{ margin: "0 20px" }}>
+    <Link to="/create-branch" style={{ textDecoration: "none", color: "#007bff", fontWeight: "bold" }}>
+      Create Branch
+    </Link>
+  </li>
+  <li style={{ margin: "0 20px" }}>
+    <Link to="/create-service" style={{ textDecoration: "none", color: "#007bff", fontWeight: "bold" }}>
+      Create Service
+    </Link>
+  </li>
+  <li style={{ margin: "0 20px" }}>
+    <Link to="/view-banks" style={{ textDecoration: "none", color: "#007bff", fontWeight: "bold" }}>
+      View Banks
+    </Link>
+  </li>
+</ul>
+
         </nav>
         <Routes>
           <Route path="/create-bank" element={<CreateBank />} />
